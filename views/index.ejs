@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List</title>
+    <link rel="stylesheet" href="css/index.css">
+</head>
+
+<body>
+    <center>
+        <div class="heading">
+            <h5> Your Day 💕✌️ Is Here</h5>
+        </div>
+    </center>
+
+
+
+    <center>
+<!-- Clock -->
+    <div id="clock">
+        
+    </div>
+
+    <!-- Date and Time -->
+        <h1> <%= finaldateandday %></h1>
+    </center>
+    <!-- Date and Time -->
+
+    
+
+
+
+
+
+
+    <!-- List -->
+    <center>
+
+        
+        <%        for (let i = 0; i < finaltask.length; i++) { %>
+            
+            <div class="list">
+                <li><%= finaltask[i] %></li>
+            </div>
+           <% } %>            
+        <!-- List -->
+        
+        
+    </center>
+        
+        
+        
+        
+        
+        <!-- /input -->
+        <div style="display: flex; justify-content: center; text-align: center; ">
+
+            <div class="inform">
+                <form method="post" action="/">
+                    <input placeholder="Complete homework!" type="text" name="task" autocomplete="off">
+                    <button type="submit"> Add</button>
+                </form>
+            </div>
+            
+        </div>
+    
+<script src="script/script.js"></script>
+
+</body>
+
+</html>
