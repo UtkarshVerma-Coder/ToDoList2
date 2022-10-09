@@ -10,26 +10,23 @@
 </head>
 
 <body>
+
+
+
     <center>
-        <div class="heading">
-            <h5> Your Day 💕✌️ Is Here</h5>
+        <!-- Clock -->
+        <div id="clock">
+
         </div>
+
+        <!-- Date and Time -->
+        <div id="DayDateMonth">
+            <%= finaldateandday %>
+        </div>
+        <!-- Date and Time -->
     </center>
 
 
-
-    <center>
-<!-- Clock -->
-    <div id="clock">
-        
-    </div>
-
-    <!-- Date and Time -->
-        <h1> <%= finaldateandday %></h1>
-    </center>
-    <!-- Date and Time -->
-
-    
 
 
 
@@ -39,35 +36,45 @@
     <!-- List -->
     <center>
 
-        
-        <%        for (let i = 0; i < finaltask.length; i++) { %>
-            
-            <div class="list">
-                <li><%= finaltask[i] %></li>
-            </div>
-           <% } %>            
-        <!-- List -->
-        
-        
-    </center>
-        
-        
-        
-        
-        
-        <!-- /input -->
-        <div style="display: flex; justify-content: center; text-align: center; ">
 
-            <div class="inform">
-                <form method="post" action="/">
-                    <input placeholder="Complete homework!" type="text" name="task" autocomplete="off">
-                    <button type="submit"> Add</button>
-                </form>
+        <% for (let i=0; i < finaltask.length; i++) { %>
+
+            <div class="list">
+                <p>
+                    <%= finaltask[i] %>
+                </p>
             </div>
-            
+            <% } %>
+                <!-- List -->
+
+
+    </center>
+
+
+
+
+
+    <!-- /input -->
+    <div style="display: flex; justify-content: center; text-align: center; ">
+
+        <div id="form">
+            <form method="post" action="/">
+
+                
+                <input placeholder="Complete homework!" type="text" name="task" autocomplete="off" required
+                oninvalid="this.setCustomValidity('Enter task to add in your list')"
+  oninput="this.setCustomValidity('')"/>
+
+
+
+
+                <button id="submitbutton" type="submit"> Add</button>
+            </form>
         </div>
-    
-<script src="script/script.js"></script>
+
+    </div>
+
+    <script src="script/script.js"></script>
 
 </body>
 
